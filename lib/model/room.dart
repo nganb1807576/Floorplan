@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'core/baseElement.dart';
 import '../function/utils.dart';
 
-class RectElement implements BaseElement {
+class Room implements BaseElement {
   final String? roomName;
   final double x;
   final double y;
@@ -11,7 +11,7 @@ class RectElement implements BaseElement {
   final double height;
 
 
-  RectElement({
+  Room({
     this.roomName,
     required this.x,
     required this.y,
@@ -24,8 +24,8 @@ class RectElement implements BaseElement {
   Rect getExtent() => Rect.fromLTWH(x, y, width, height);
 
 
-  factory RectElement.fromJson(Map<String, dynamic> data) {
-    return RectElement(
+  factory Room.fromJson(Map<String, dynamic> data) {
+    return Room(
       x: parseNumber(data['x']),
       y: parseNumber(data['y']),
       width: parseNumber(data['w']),
