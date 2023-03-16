@@ -28,8 +28,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: Colors.blueGrey.shade50),
       home: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.white, elevation: 0, iconTheme: const IconThemeData(color: Colors.black)),
+        appBar: AppBar(
+            backgroundColor: Colors.blueGrey,
+            // elevation: 0,
+            iconTheme: const IconThemeData(color: Colors.white)
+        ),
         drawer: DrawerMenu(),
         body: FutureBuilder<String?>(
           future: _future,

@@ -39,9 +39,13 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
       top: element.y, left: element.x,
       child: Container(
         height: element.height, width: element.width,
-        decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 2)),
-        child: Center(child: Text("${element.roomName}")),
-        // color: element.fill,
+        decoration: BoxDecoration(
+          // color: Colors.brown.shade100,
+            border: Border.all(color: Colors.black, width: 2)
+        ),
+        child: Center(
+            child: Text("${element.roomName}", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+        ),
       ),
     );
   }
@@ -80,7 +84,7 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
         transformationController: TransformationController(), maxScale: 300, constrained: false,
         child: GestureDetector(
           child: CustomPaint(
-            // painter: GridPainter(),
+            painter: GridPainter(),
             child: Stack(children: layers),
           ),
         ));

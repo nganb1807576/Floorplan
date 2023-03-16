@@ -6,59 +6,51 @@
       "Tang":1,
       "DuLieu":[
         {
-          "roomName":"216",
-          "type":"room",
-          "x":110,
-          "y":10,
-          "w":50,
-          "h":50
-        },
-        {
-          "roomName":"215",
+          "roomName":"BM. CNTT",
           "type":"room",
           "x":60,
-          "y":60,
+          "y":20,
           "w":100,
-          "h":50
+          "h":90
         },
         {
           "roomName":"BM. THUD",
           "type":"room",
-          "x":0,
+          "x":20,
           "y":110,
-          "w":160,
+          "w":140,
           "h":50
         },
         {
           "roomName":"BM. MMT&TT",
           "type":"room",
-          "x":0,
+          "x":20,
           "y":160,
-          "w":160,
+          "w":140,
           "h":50
         },
         {
           "roomName":"BM. KHMT",
           "type":"room",
-          "x":0,
+          "x":20,
           "y":210,
-          "w":160,
+          "w":140,
           "h":50
         },
         {
           "roomName":"BM. CNPM",
           "type":"room",
-          "x":0,
+          "x":20,
           "y":260,
-          "w":160,
+          "w":140,
           "h":50
         },
         {
           "roomName":"BM. HTTT",
           "type":"room",
-          "x":0,
+          "x":20,
           "y":310,
-          "w":160,
+          "w":140,
           "h":50
         },
         {
@@ -68,6 +60,22 @@
           "y":360,
           "w":50,
           "h":50
+        },
+        {
+          "roomName":"WC",
+          "type":"room",
+          "x":110,
+          "y":460,
+          "w":50,
+          "h":120
+        },
+        {
+          "roomName":"",
+          "type":"room",
+          "x":110,
+          "y":360,
+          "w":0,
+          "h":220
         },
         {
           "roomName":"111",
@@ -92,6 +100,22 @@
           "y":360,
           "w":25,
           "h":100
+        },
+        {
+          "roomName":"SAN CO \nNHAN TAO",
+          "type":"room",
+          "x":190,
+          "y":460,
+          "w":126,
+          "h":100
+        },
+        {
+          "roomName":"DOAN KHOA DHCT",
+          "type":"room",
+          "x":470,
+          "y":60,
+          "w":50,
+          "h":200
         },
         {
           "roomName":"109",
@@ -174,54 +198,6 @@
           "h":50
         },
         {
-          "roomName":"DOAN KHOA DHCT",
-          "type":"room",
-          "x":470,
-          "y":60,
-          "w":50,
-          "h":200
-        },
-        {
-          "roomName":"SAN CO NHAN TAO",
-          "type":"room",
-          "x":190,
-          "y":460,
-          "w":126,
-          "h":100
-        },
-        {
-          "roomName":"WC4",
-          "type":"room",
-          "x":110,
-          "y":460,
-          "w":50,
-          "h":30
-        },
-        {
-          "roomName":"WC3",
-          "type":"room",
-          "x":110,
-          "y":490,
-          "w":50,
-          "h":30
-        },
-        {
-          "roomName":"WC2",
-          "type":"room",
-          "x":110,
-          "y":520,
-          "w":50,
-          "h":30
-        },
-        {
-          "roomName":"WC1",
-          "type":"room",
-          "x":110,
-          "y":550,
-          "w":50,
-          "h":30
-        },
-        {
           "roomName":"\nKHONG GIAN SANG CHE",
           "type":"room",
           "x":60,
@@ -232,43 +208,67 @@
         {
           "roomName":"THU VIEN",
           "type":"room",
-          "x":390,
+          "x":400,
           "y":580,
-          "w":100,
-          "h":150
+          "w":120,
+          "h":122
+        },
+
+
+        {
+          "roomName":"",
+          "type":"room",
+          "x":190,
+          "y":20,
+          "w":0,
+          "h":90
         },
         {
           "roomName":"",
           "type":"room",
           "x":190,
-          "y":0,
+          "y":160,
           "w":0,
-          "h":310
+          "h":150
         },
+
+
+        {
+          "roomName":"",
+          "type":"room",
+          "x":310,
+          "y":60,
+          "w":0,
+          "h":100
+        },
+        {
+          "roomName":"",
+          "type":"room",
+          "x":310,
+          "y":210,
+          "w":0,
+          "h":100
+        },
+
+
         {
           "roomName":"",
           "type":"room",
           "x":190,
           "y":310,
-          "w":120,
+          "w":50,
           "h":0
         },
         {
           "roomName":"",
           "type":"room",
-          "x":310,
-          "y":60,
-          "w":0,
-          "h":250
-        },
-        {
-          "roomName":"",
-          "type":"room",
-          "x":310,
-          "y":60,
-          "w":210,
+          "x":290,
+          "y":310,
+          "w":20,
           "h":0
         },
+
+
         {
           "roomName":"",
           "type":"room",
@@ -282,38 +282,16 @@
           "type":"room",
           "x":470,
           "y":560,
-          "w":50,
+          "w":30,
           "h":0
         },
+
+
         {
           "roomName":"",
           "type":"room",
-          "x":520,
-          "y":560,
-          "w":0,
-          "h":200
-        },
-        {
-          "roomName":"",
-          "type":"room",
-          "x":370,
-          "y":680,
-          "w":0,
-          "h":80
-        },
-        {
-          "roomName":"",
-          "type":"room",
-          "x":370,
-          "y":680,
-          "w":20,
-          "h":0
-        },
-        {
-          "roomName":"",
-          "type":"room",
-          "x":490,
-          "y":680,
+          "x":160,
+          "y":700,
           "w":30,
           "h":0
         },
@@ -322,32 +300,25 @@
           "type":"room",
           "x":240,
           "y":700,
-          "w":130,
+          "w":70,
           "h":0
         },
         {
           "roomName":"",
           "type":"room",
-          "x":160,
+          "x":350,
           "y":700,
-          "w":40,
+          "w":50,
           "h":0
         },
+
         {
           "roomName":"",
           "type":"room",
-          "x":0,
-          "y":360,
-          "w":110,
-          "h":0
-        },
-        {
-          "roomName":"",
-          "type":"room",
-          "x":110,
-          "y":360,
+          "x":540,
+          "y":0,
           "w":0,
-          "h":220
+          "h":720
         }
       ]
     }
