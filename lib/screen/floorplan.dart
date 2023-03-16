@@ -25,6 +25,9 @@ class _FloorplanState extends State<Floorplan> with SingleTickerProviderStateMix
   void load(String jsonString) {
     final data = json.decode(jsonString);
     root = RootElement.fromJson(data);
+    print(data);
+    print("------");
+    print(root.locationId);
   }
 
   @override
