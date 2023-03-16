@@ -10,6 +10,7 @@ class RectElement implements BaseElement {
   final double width;
   final double height;
 
+
   RectElement({
     this.roomName,
     required this.x,
@@ -18,8 +19,10 @@ class RectElement implements BaseElement {
     required this.height,
   });
 
+
   @override
   Rect getExtent() => Rect.fromLTWH(x, y, width, height);
+
 
   factory RectElement.fromJson(Map<String, dynamic> data) {
     return RectElement(

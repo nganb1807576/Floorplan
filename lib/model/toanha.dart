@@ -3,13 +3,13 @@ import 'core/elementwithchildren.dart';
 
 class RootElement extends ElementWithChildren<LayerElement> {
   final String locationId;
-
   get layers => children;
 
   RootElement({
     List<LayerElement>? children,
     required this.locationId,
   }) : super(children: children);
+
 
   factory RootElement.fromJson(Map<String, dynamic> data) {
     final children = ((data['DuLieu'] ?? []) as List).map((child) {

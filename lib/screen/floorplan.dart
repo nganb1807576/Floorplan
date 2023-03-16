@@ -19,11 +19,9 @@ class FloorPlan extends StatefulWidget {
 class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMixin {
   late RootElement root;
 
-  List<num> radiusList = [];
   void load(String jsonString) {
     final data = json.decode(jsonString);
     root = RootElement.fromJson(data);
-    print(data);
   }
 
   @override
@@ -32,19 +30,13 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
     super.initState();
   }
 
+
   Widget buildRectElement(BuildContext context, RectElement element) {
     return Positioned(
-      top: element.y,
-      left: element.x,
+      top: element.y, left: element.x,
       child: Container(
-        height: element.height,
-        width: element.width,
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.black,
-            width: 2,
-          ),
-        ),
+        height: element.height, width: element.width,
+        decoration: BoxDecoration(border: Border.all(color: Colors.black, width: 2)),
         child: Center(child: Text("${element.roomName}")),
         // color: element.fill,
       ),
@@ -56,11 +48,11 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
     switch (element.runtimeType) {
       case RectElement:
         return buildRectElement(context, element as RectElement);
-
       default:
         throw Exception('Invalid element type: ${element.runtimeType}');
     }
   }
+
 
   Widget buildLayer(BuildContext context, LayerElement layer, Rect size) {
     final elements = layer.children
@@ -70,33 +62,25 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
     return SizedBox(
       height: size.bottom,
       width: size.right,
-      child: Stack(
-        children: elements,
-      ),
+      child: Stack(children: elements),
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
     final size = root.getExtent();
-
     final layers = root.layers
         .map<Widget>((layer) => buildLayer(context, layer, size))
         .toList();
 
     return InteractiveViewer(
-        transformationController: TransformationController(),
-        maxScale: 300,
-        constrained: false,
+        transformationController: TransformationController(), maxScale: 300, constrained: false,
         child: GestureDetector(
           child: CustomPaint(
             // painter: GridPainter(),
-
-            child: Stack(
-              children: layers,
-            ),
+            child: Stack(children: layers),
           ),
         ));
   }
-
 }

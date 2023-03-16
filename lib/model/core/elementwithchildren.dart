@@ -28,6 +28,7 @@ class ElementWithChildren<T extends BaseElement> implements BaseElement {
         bottom = extent.bottom;
       }
     }
+
     return Rect.fromLTRB(left, top, right, bottom);
   }
 }
