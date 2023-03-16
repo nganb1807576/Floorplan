@@ -1,5 +1,5 @@
 import 'tang.dart';
-import 'elementwithchildren.dart';
+import 'core/elementwithchildren.dart';
 
 class RootElement extends ElementWithChildren<LayerElement> {
   final String locationId;

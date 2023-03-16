@@ -1,32 +1,29 @@
 import 'dart:convert';
-import 'package:floorplans/gird/gird_painter.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 
-import '../model/baseElement.dart';
+import '../model/core/baseElement.dart';
+import '../model/toanha.dart';
 import '../model/tang.dart';
 import '../model/phong.dart';
-import 'package:flutter/material.dart';
-import '../model/toanha.dart';
 
-class Floorplan extends StatefulWidget {
+import 'package:floorplans/gird/gird_painter.dart';
+
+class FloorPlan extends StatefulWidget {
   final String jsonFloorplan;
-  const Floorplan({required this.jsonFloorplan, Key? key}) : super(key: key);
+  const FloorPlan({required this.jsonFloorplan, Key? key}) : super(key: key);
 
   @override
-  State<Floorplan> createState() => _FloorplanState();
+  State<FloorPlan> createState() => _FloorPlanState();
 }
 
-class _FloorplanState extends State<Floorplan> with SingleTickerProviderStateMixin {
+class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMixin {
   late RootElement root;
-  late AnimationController controller;
-  var centerXList = [];
-  var centerYList = [];
+
   List<num> radiusList = [];
   void load(String jsonString) {
     final data = json.decode(jsonString);
     root = RootElement.fromJson(data);
     print(data);
-    print("------");
   }
 
   @override
@@ -44,7 +41,7 @@ class _FloorplanState extends State<Floorplan> with SingleTickerProviderStateMix
         width: element.width,
         decoration: BoxDecoration(
           border: Border.all(
-            color: element.fill as Color,
+            color: Colors.black,
             width: 2,
           ),
         ),
@@ -93,7 +90,7 @@ class _FloorplanState extends State<Floorplan> with SingleTickerProviderStateMix
         constrained: false,
         child: GestureDetector(
           child: CustomPaint(
-            painter: GridPainter(),
+            // painter: GridPainter(),
 
             child: Stack(
               children: layers,
@@ -102,9 +99,4 @@ class _FloorplanState extends State<Floorplan> with SingleTickerProviderStateMix
         ));
   }
 
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
 }

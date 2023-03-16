@@ -1,5 +1,5 @@
-import 'baseElement.dart';
-import 'elementwithchildren.dart';
+import 'core/baseElement.dart';
+import 'core/elementwithchildren.dart';
 import 'phong.dart';
 
 class LayerElement extends ElementWithChildren<BaseElement> {

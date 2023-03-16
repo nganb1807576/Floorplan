@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:floorplans/widget/drawer.dart';
 import 'package:floorplans/screen/floorplan.dart';
 import 'package:flutter/material.dart';
@@ -28,11 +27,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text("Sơ Đồ ")),
-          backgroundColor: Colors.green,
-        ),
-        drawer: drawermenu(),
+        appBar: AppBar(backgroundColor: Colors.white, elevation: 0, iconTheme: const IconThemeData(color: Colors.black)),
+        drawer: DrawerMenu(),
         body: FutureBuilder<String?>(
           future: _future,
           builder: (context, snapshot) {
@@ -61,9 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(
-          child: Floorplan(jsonFloorplan: widget.json),
-        ),
+        Expanded(child: FloorPlan(jsonFloorplan: widget.json)),
       ],
     );
   }
