@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 void main() async {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -27,12 +27,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:
-      Scaffold(
+      home: Scaffold(
         appBar: AppBar(
-          title: Text("So Do"),
+          title: const Center(child: Text("Sơ Đồ ")),
           backgroundColor: Colors.green,
         ),
+        drawer: drawermenu(),
         body: FutureBuilder<String?>(
           future: _future,
           builder: (context, snapshot) {
@@ -42,10 +42,7 @@ class _MyAppState extends State<MyApp> {
             return const SizedBox.shrink();
           },
         ),
-
-        drawer: drawermenu(),
       ),
-
     );
   }
 }
@@ -60,15 +57,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Column(
-          children: [
-            Expanded(
-              child: Floorplan(jsonFloorplan: widget.json),
-            ),
-          ],
-        );
+      children: [
+        Expanded(
+          child: Floorplan(jsonFloorplan: widget.json),
+        ),
+      ],
+    );
   }
 }

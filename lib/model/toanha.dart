@@ -1,4 +1,4 @@
-import 'layerelement.dart';
+import 'tang.dart';
 import 'elementwithchildren.dart';
 
 class RootElement extends ElementWithChildren<LayerElement> {
@@ -12,11 +12,10 @@ class RootElement extends ElementWithChildren<LayerElement> {
   }) : super(children: children);
 
   factory RootElement.fromJson(Map<String, dynamic> data) {
-    final children = ((data['children'] ?? []) as List).map((child) {
+    final children = ((data['DuLieu'] ?? []) as List).map((child) {
       switch (child['type']) {
         case 'layer':
           return LayerElement.fromJson(child);
-
         default:
           throw Exception('Invalid root element child: $child');
       }
@@ -24,7 +23,7 @@ class RootElement extends ElementWithChildren<LayerElement> {
 
     return RootElement(
       children: children,
-      locationId: data['locationId'],
+      locationId: data['ToaNha'],
     );
   }
 }

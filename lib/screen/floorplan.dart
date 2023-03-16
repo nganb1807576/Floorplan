@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'package:floorplans/gird/gird_painter.dart';
 import 'package:flutter/services.dart';
 
-import '../model/baseelement.dart';
-import '../model/layerelement.dart';
-import '../model/room.dart';
+import '../model/baseElement.dart';
+import '../model/tang.dart';
+import '../model/phong.dart';
 import 'package:flutter/material.dart';
-import '../model/rootelement.dart';
+import '../model/toanha.dart';
 
 class Floorplan extends StatefulWidget {
   final String jsonFloorplan;
@@ -27,7 +27,6 @@ class _FloorplanState extends State<Floorplan> with SingleTickerProviderStateMix
     root = RootElement.fromJson(data);
     print(data);
     print("------");
-    print(root.locationId);
   }
 
   @override

@@ -1,12 +1,12 @@
-import 'baseelement.dart';
+import 'baseElement.dart';
 import 'elementwithchildren.dart';
-import 'room.dart';
+import 'phong.dart';
 
 class LayerElement extends ElementWithChildren<BaseElement> {
   LayerElement({List<BaseElement>? children}) : super(children: children);
 
   factory LayerElement.fromJson(Map<String, dynamic> data) {
-    final children = ((data['children'] ?? []) as List).map((child) {
+    final children = ((data['DuLieu'] ?? []) as List).map((child) {
       switch (child['type']) {
         case 'room':
           return RectElement.fromJson(child);

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'baseelement.dart';
+import 'baseElement.dart';
 import '../function/utils.dart';
 
 class RectElement implements BaseElement {
   final Color? fill;
-  final Color? stroke;
   final String? roomName;
   final double x;
   final double y;
@@ -15,7 +14,6 @@ class RectElement implements BaseElement {
   RectElement({
     this.roomName,
     this.fill,
-    this.stroke,
     required this.x,
     required this.y,
     required this.width,
@@ -28,7 +26,6 @@ class RectElement implements BaseElement {
   factory RectElement.fromJson(Map<String, dynamic> data) {
     return RectElement(
       fill: parseColor(data['fill']),
-      stroke: parseColor(data['stroke']),
       x: parseNumber(data['x']),
       y: parseNumber(data['y']),
       width: parseNumber(data['w']),
