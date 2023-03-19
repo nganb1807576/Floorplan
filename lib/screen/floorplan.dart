@@ -33,20 +33,29 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
     super.initState();
   }
 
+  String click = "";
 
   Widget buildRoom(BuildContext context, Room element) {
     return Positioned(
       top: element.y, left: element.x,
-      child: Container(
-        height: element.height, width: element.width,
-        decoration: BoxDecoration(
-          // color: Colors.brown.shade100,
-            border: Border.all(color: Colors.black, width: 2)
-        ),
-        child: Center(
-            child: Text("${element.roomName}", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+      child: GestureDetector(
+        onTap: (){
+          setState(() {
+            click=element.roomName!;
+          });
+        },
+        child: Container(
+          height: element.height, width: element.width,
+          decoration: BoxDecoration(
+              color: click==element.roomName ? Colors.brown.shade100: Colors.grey.shade100,
+              border: Border.all(color: Colors.black, width: 2)
+          ),
+          child: Center(
+              child: Text("${element.roomName}", style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
+          ),
         ),
       ),
+
     );
   }
 
