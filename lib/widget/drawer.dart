@@ -49,7 +49,7 @@ class DrawerMenu extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.6,
       child: Drawer(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blueGrey.shade50,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
