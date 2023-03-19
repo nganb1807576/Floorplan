@@ -1,18 +1,22 @@
 import 'package:floorplans/main.dart';
+import 'package:floorplans/screen/admin/RoomCRUD.dart';
 import 'package:flutter/material.dart';
 
 final List<String> listname = [
   "Floorplan",
+  "RoomCURD",
 ];
 
 
 final List<IconData> listicon = [
   Icons.map,
+  Icons.meeting_room,
 ];
 
 
 final List<Widget> listclass = [
   MyApp(),
+  RoomCRUD(),
 ];
 
 
