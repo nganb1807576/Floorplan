@@ -28,7 +28,11 @@ class _RoomCRUDState extends State<RoomCRUD> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("CRUD ROM")),
+      appBar: AppBar(
+          title: const Text("CRUD ROOM"),
+          backgroundColor: Colors.blueGrey,
+          centerTitle: true
+      ),
       body: StreamBuilder<QuerySnapshot>(
         stream: data.collection("Room").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {

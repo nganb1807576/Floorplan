@@ -37,7 +37,9 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
             backgroundColor: Colors.blueGrey,
             // elevation: 0,
-            iconTheme: const IconThemeData(color: Colors.white)
+            iconTheme: const IconThemeData(color: Colors.white),
+            title: const Text("Indoor Map"),
+            centerTitle: true,
         ),
         drawer: DrawerMenu(),
         body: FutureBuilder<String?>(
