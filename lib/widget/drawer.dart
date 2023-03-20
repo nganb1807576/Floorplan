@@ -1,24 +1,19 @@
 import 'package:floorplans/main.dart';
 import 'package:floorplans/screen/admin/RoomCRUD.dart';
-import 'package:floorplans/screen/admin/ListRoom.dart';
 import 'package:floorplans/screen/floorplanOnline.dart';
 
 import 'package:flutter/material.dart';
-
-
-
 
 final List<String> listname = [
   "Floorplan",
   "FloorplanOnline",
   "RoomCURD",
-  "ListRoom",
+
 ];
 
 
 final List<IconData> listicon = [
   Icons.map,
-  Icons.home,
   Icons.meeting_room,
   Icons.build,
 ];
@@ -28,7 +23,6 @@ final List<Widget> listclass = [
   MyApp(),
   CallFloorplan(),
   RoomCRUD(),
-  ListRoom(),
 ];
 
 
