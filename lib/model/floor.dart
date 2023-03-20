@@ -1,3 +1,5 @@
+import 'package:floorplans/model/stair.dart';
+
 import 'core/baseElement.dart';
 import 'core/elementwithchildren.dart';
 import 'room.dart';
@@ -10,6 +12,8 @@ class Floor extends ElementWithChildren<BaseElement> {
       switch (child['type']) {
         case 'room':
           return Room.fromJson(child);
+        case 'stair':
+          return Stair.fromJson(child);
         default:
           throw Exception('Invalid layer child: $child');
       }

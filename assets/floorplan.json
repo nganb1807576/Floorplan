@@ -198,7 +198,7 @@
           "h":50
         },
         {
-          "roomName":"\nKHONG GIAN SANG CHE",
+          "roomName":"KHONG GIAN\n SANG CHE",
           "type":"room",
           "x":60,
           "y":580,
@@ -319,6 +319,29 @@
           "y":0,
           "w":0,
           "h":720
+        },
+
+
+        {
+          "type":"stair",
+          "x":110,
+          "y":410,
+          "w":50,
+          "h":50
+        },
+        {
+          "type":"stair",
+          "x":340,
+          "y":580,
+          "w":50,
+          "h":50
+        },
+        {
+          "type":"stair",
+          "x":470,
+          "y":300,
+          "w":50,
+          "h":50
         }
       ]
     }

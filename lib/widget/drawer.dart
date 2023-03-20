@@ -1,22 +1,29 @@
 import 'package:floorplans/main.dart';
 import 'package:floorplans/screen/admin/RoomCRUD.dart';
+import 'package:floorplans/screen/admin/ListRoom.dart';
+
 import 'package:flutter/material.dart';
+
+
 
 final List<String> listname = [
   "Floorplan",
   "RoomCURD",
+  "ListRoom",
 ];
 
 
 final List<IconData> listicon = [
   Icons.map,
   Icons.meeting_room,
+  Icons.build,
 ];
 
 
 final List<Widget> listclass = [
   MyApp(),
   RoomCRUD(),
+  ListRoom(),
 ];
 
 
@@ -65,7 +72,7 @@ class DrawerMenu extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.5,
-                      child: Image.asset('assets/images/logo.jpg'),
+                      child: Image.asset('assets/images/logoctu.png'),
                     ),
                   ],
                 ),

@@ -8,6 +8,7 @@ import '../model/room.dart';
 
 import 'package:floorplans/grid/gird_painter.dart';
 
+import '../model/stair.dart';
 
 class FloorPlan extends StatefulWidget {
   final String jsonFloorplan;
@@ -17,8 +18,8 @@ class FloorPlan extends StatefulWidget {
   State<FloorPlan> createState() => _FloorPlanState();
 }
 
-
-class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMixin {
+class _FloorPlanState extends State<FloorPlan>
+    with SingleTickerProviderStateMixin {
   late Building root;
 
   void load(String jsonString) {
@@ -37,25 +38,44 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
 
   Widget buildRoom(BuildContext context, Room element) {
     return Positioned(
-      top: element.y, left: element.x,
+      top: element.y,
+      left: element.x,
       child: GestureDetector(
-        onTap: (){
+        onTap: () {
           setState(() {
-            click=element.roomName!;
+            click = element.roomName!;
           });
         },
         child: Container(
-          height: element.height, width: element.width,
+          height: element.height,
+          width: element.width,
           decoration: BoxDecoration(
-              color: click==element.roomName ? Colors.brown.shade100: Colors.grey.shade100,
-              border: Border.all(color: Colors.black, width: 2)
-          ),
+              color: click == element.roomName
+                  ? Colors.orange.shade50
+                  : Colors.grey.shade100,
+              border: Border.all(color: Colors.black, width: 2)),
           child: Center(
-              child: Text("${element.roomName}", style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold))
-          ),
+              child: Text("${element.roomName}",
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold))),
         ),
       ),
+    );
+  }
 
+
+  Widget buildStair(BuildContext context, Stair element) {
+    return Positioned(
+      top: element.y,
+      left: element.x,
+      child: Container(
+        height: element.height,
+        width: element.width,
+        child: SizedBox(
+          // width: MediaQuery.of(context).size.width * 0.5,
+          child: Image.asset('assets/images/stair.jpg'),
+        ),
+      ),
     );
   }
 
@@ -64,6 +84,8 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
     switch (element.runtimeType) {
       case Room:
         return buildRoom(context, element as Room);
+      case Stair:
+        return buildStair(context, element as Stair);
       default:
         throw Exception('Invalid element type: ${element.runtimeType}');
     }
@@ -76,11 +98,11 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
         .toList();
 
     return SizedBox(
-      height: size.bottom, width: size.right,
+      height: size.bottom,
+      width: size.right,
       child: Stack(children: elements),
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +112,9 @@ class _FloorPlanState extends State<FloorPlan> with SingleTickerProviderStateMix
         .toList();
 
     return InteractiveViewer(
-        transformationController: TransformationController(), maxScale: 300, constrained: false,
+        transformationController: TransformationController(),
+        maxScale: 300,
+        constrained: false,
         child: GestureDetector(
           child: CustomPaint(
             painter: GridPainter(),
