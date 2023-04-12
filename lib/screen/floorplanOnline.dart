@@ -141,11 +141,7 @@ class _FloorplanOnlineState extends State<FloorplanOnline> with SingleTickerProv
 
 
   void getDataFromFirebase() async {
-    await getRoomsAndObj().then((value) {
-      dataRoomAndObj.add(value);
-      print(dataRoomAndObj);
-    });
-
+    await getRoomsAndObj().then((value) => dataRoomAndObj.add(value));
   }
 }
 
