@@ -35,7 +35,7 @@ class _FloorPlanState extends State<FloorPlan>
   }
 
   String click = "";
-
+//Doc DL tu file gia "floorplan.json"
   Widget buildRoom(BuildContext context, Room element) {
     return Positioned(
       top: element.y,
@@ -117,7 +117,7 @@ class _FloorPlanState extends State<FloorPlan>
         constrained: false,
         child: GestureDetector(
           child: CustomPaint(
-            painter: GridPainter(),
+            painter: GridPainter(), //Luoi ô vuong
             child: Stack(children: layers),
           ),
         ));

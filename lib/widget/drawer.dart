@@ -4,6 +4,7 @@ import 'package:floorplans/screen/floorplanOnline.dart';
 
 import 'package:flutter/material.dart';
 
+//Thanh Menu
 final List<String> listname = [
   "Floorplan",
   "FloorplanOnline",
@@ -71,7 +72,7 @@ class DrawerMenu extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.5,
-                      child: Image.asset('assets/images/logoctu.png'),
+                      child: Image.asset('assets/images/ctu.png'),
                     ),
                   ],
                 ),

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "31640364741",
-    "project_id": "base-ips",
-    "storage_bucket": "base-ips.appspot.com"
+    "project_number": "115314047922",
+    "project_id": "nln23-a4686",
+    "storage_bucket": "nln23-a4686.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:31640364741:android:8486060bc3dbb15e5e72ac",
+        "mobilesdk_app_id": "1:115314047922:android:2168259b573ac0e7e042ab",
         "android_client_info": {
           "package_name": "com.example.floorplans"
         }
       },
       "oauth_client": [
         {
-          "client_id": "31640364741-vrnde2bu2racaahqi4tulnqr0ssbda45.apps.googleusercontent.com",
+          "client_id": "115314047922-vrv2nnsmgo1dmp6eknphd64d33phjuc4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB12ZudxVD9E2cuuXl4WF2DMoL0pvgbA4I"
+          "current_key": "AIzaSyDQe3ZPCHzqlC7T0h21vSZq0RAvEU_lYqc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "31640364741-vrnde2bu2racaahqi4tulnqr0ssbda45.apps.googleusercontent.com",
+              "client_id": "115314047922-vrv2nnsmgo1dmp6eknphd64d33phjuc4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

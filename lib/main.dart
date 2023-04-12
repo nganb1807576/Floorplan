@@ -5,9 +5,10 @@ import 'package:floorplans/screen/floorplan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
+//Ham de ket noi voi Firebase
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(); //Khoi tao firebase cho UD
   runApp(const MyApp());
 }
 
@@ -25,7 +26,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    _future = rootBundle.loadString('assets/floorplan.json');
+    _future = rootBundle.loadString('assets/floorplan.json'); //Doc DL file gia
     super.initState();
   }
 

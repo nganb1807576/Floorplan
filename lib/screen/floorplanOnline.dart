@@ -26,10 +26,10 @@ class _FloorplanOnlineState extends State<FloorplanOnline> with SingleTickerProv
   List<dynamic> roomsAndObj = [];
 
   late final dataRoomAndObj = [];
-  final data = FirebaseFirestore.instance;
+  final data = FirebaseFirestore.instance; //Khai bao bien data de lay DL tu firebase
 
   Future<List<dynamic>> getRoomsAndObj() async {
-    var snapshot = (await FirebaseFirestore.instance.collection('Room').get());
+    var snapshot = (await FirebaseFirestore.instance.collection('Room').get()); //collection(cot) bang ben firebase
     var documents = [];
 
     snapshot.docs.forEach((element) {
@@ -90,14 +90,14 @@ class _FloorplanOnlineState extends State<FloorplanOnline> with SingleTickerProv
         constrained: false,
         child: Stack(children: [
           GestureDetector(
-            onTapDown: (details) {
+            onTapDown: (details) {  //Hiển thị tọa độ XY
               print("x: " + details.localPosition.dx.ceil().toString());
               print("y: " + details.localPosition.dy.ceil().toString());
             },
             child: Stack(children: [
               RepaintBoundary(
                 child: CustomPaint(
-                  painter: GridPainter(),
+                  painter: GridPainter(), //lưới
                   child: StreamBuilder<QuerySnapshot>(
                     stream: data.collection("Room").snapshots(),
                     builder: (context, snapshot) {
@@ -125,7 +125,7 @@ class _FloorplanOnlineState extends State<FloorplanOnline> with SingleTickerProv
                       };
 
                       root = Building.fromJson(data);
-                      final size = Rect.fromLTRB(0.0, 0.0, 540.0, 720.0);
+                      final size = Rect.fromLTRB(0.0, 0.0, 700.0, 800.0); //size toan B.do
                       final layers = root.layers.map<Widget>((layer) => buildLayer(context, layer, size)).toList();
 
                       return Stack(children: layers,);
@@ -141,7 +141,11 @@ class _FloorplanOnlineState extends State<FloorplanOnline> with SingleTickerProv
 
 
   void getDataFromFirebase() async {
-    await getRoomsAndObj().then((value) => dataRoomAndObj.add(value));
+    await getRoomsAndObj().then((value) {
+      dataRoomAndObj.add(value);
+      print(dataRoomAndObj);
+    });
+
   }
 }
 
